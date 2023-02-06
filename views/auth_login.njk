@@ -1,0 +1,25 @@
+{% extends "publico_base.njk" %}
+
+{% block titulo %}Login{% endblock %}
+
+{% block contenido %}
+
+    <h1>Login de Usuario</h1>
+
+    <form action="/juego" method="post" enctype="multipart/form-data">
+        <div class="form-group mb-3">
+            <label for="login">Usuario:</label>
+            <input type="text" class="form-control" name="login" 
+                placeholder="Nombre de Usuario..." />
+        </div>
+        <div class="form-group mb-3">
+            <label for="password">Contraseña:</label>
+            <input type="text" class="form-control" name="password"
+                placeholder="Contraseña..." />
+        </div>
+        <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+{% endblock %}
